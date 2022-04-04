@@ -6,9 +6,9 @@ from app import main
 
 def test_ping(test_app):
     # Given
-    #test_app
+    # test_app
 
-    # When 
+    # When
     response = test_app.get("/ping")
 
     # Then

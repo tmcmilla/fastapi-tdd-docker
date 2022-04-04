@@ -26,6 +26,7 @@ def test_app():
 
     # tear down
 
+
 @pytest.fixture(scope="module")
 def test_app_with_db():
     # set up
@@ -38,7 +39,7 @@ def test_app_with_db():
         generate_schemas=True,
         add_exception_handlers=True,
     )
-    with  TestClient(app) as test_client:
+    with TestClient(app) as test_client:
 
         # testing
         yield test_client
