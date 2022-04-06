@@ -5,7 +5,7 @@
 import json
 from cgitb import reset
 
-import pytest
+# import pytest
 
 
 def test_create_summary(test_app_with_db):
