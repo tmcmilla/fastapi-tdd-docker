@@ -1,8 +1,6 @@
 # pull official base image
 FROM python:3.10.1-slim-buster
 
-# create if does not exist
-RUN mkdir -p /usr/src/app
 # set working directory
 WORKDIR /usr/src/app
 
@@ -18,7 +16,8 @@ RUN apt-get update \
 # install python dependencies
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+COPY ./requirements-dev.txt .
+RUN pip install -r requirements-dev.txt
 
 # add app
 COPY . .
